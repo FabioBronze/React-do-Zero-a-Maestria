@@ -10,6 +10,7 @@ import Children from "./components/Children.jsx";
 import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetails from "./components/UserDetails";
 import { useState } from "react";
 
 function App() {
@@ -28,6 +29,13 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   };
+
+  const users = [
+    { id: 1, name: "Fábio", age: 20, job: "Programador" },
+    { id: 2, name: "João", age: 30, job: "Advogado" },
+    { id: 3, name: "Joana", age: 17, job: "Estudante" },
+    { id: 4, name: "Pedro", age: 20, job: "Estudante" },
+  ];
 
   return (
     <div className="App">
@@ -74,6 +82,14 @@ function App() {
       {/*State Lift*/}
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      {users.map((user) => (
+        <UserDetails
+          key={user.id}
+          name={user.name}
+          age={user.age}
+          job={user.job}
+        />
+      ))}
     </div>
   );
 }
