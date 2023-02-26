@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const MyForm = ({ user }) => {
   //Controlled Inputs
-
   // Gerenciamento de Dados
   const [name, setName] = useState(user ? user.name : "");
   const [email, setEmail] = useState(user ? user.email : "");
