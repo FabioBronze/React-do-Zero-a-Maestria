@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "price": 15.99
+    },
+    {
+      "id": 3,
+      "name": "Chapéu",
+      "price": 9.99
+    },
+    {
+      "name": "livro",
+      "price": "70",
+      "id": 22
+    }
+  ]
+}
