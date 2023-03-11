@@ -29,9 +29,9 @@ const HookUseState = () => {
           value={age}
           onChange={(e) => setAge(e.target.value)}
         />
+        <input type="submit" value="Enviar" />
       </form>
       <p>Você tem {age} anos!</p>
-      <button onClick={handleSubmit}>Enviar</button>
       <hr />
     </div>
   );
